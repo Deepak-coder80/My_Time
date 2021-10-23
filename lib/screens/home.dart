@@ -51,6 +51,37 @@ class _HomePageState extends State<HomePage> {
                     size: 5,
                     onPressed: empyMethod),
               ),
+              Padding(
+                padding: EdgeInsets.all(defaultP),
+              ),
+            ],
+          ),
+          const Expanded(child: Text("Hello")),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(defaultP),
+              ),
+              Expanded(
+                child: TimeButton(
+                    color: const Color(0xff212121),
+                    text: "Stop",
+                    size: 5,
+                    onPressed: empyMethod),
+              ),
+              Padding(
+                padding: EdgeInsets.all(defaultP),
+              ),
+              Expanded(
+                child: TimeButton(
+                    color: const Color(0xff009688),
+                    text: "Restart",
+                    size: 5,
+                    onPressed: empyMethod),
+              ),
+              Padding(
+                padding: EdgeInsets.all(defaultP),
+              ),
             ],
           )
         ],
