@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_time/widget/buttons.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -56,7 +58,21 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          const Expanded(child: Text("Hello")),
+          Expanded(
+            child: CircularPercentIndicator(
+              radius: 300,
+              lineWidth: 10,
+              percent: 1,
+              center: const Text(
+                "30:00",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              progressColor: const Color(0xff009688),
+            ),
+          ),
           Row(
             children: [
               Padding(
