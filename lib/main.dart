@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_time/screens/home.dart';
+
+import 'package:my_time/screens/timerhomepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: TimerHomePage(),
     );
   }
 }
