@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_time/settings.dart';
+import 'package:my_time/time.dart';
+import 'package:my_time/timermodel.dart';
+import 'package:my_time/widgets.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class TimerHomePage extends StatelessWidget {
   final double defaultPadding = 5.0;
@@ -6,7 +11,7 @@ class TimerHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<PopupMenuItem<String>> menuItems = List<PopupMenuItem<String>>();
+    final List<PopupMenuItem<String>> menuItems = <PopupMenuItem<String>>[];
     menuItems.add(PopupMenuItem(
       value: 'Settings',
       child: Text('Settings'),
@@ -44,25 +49,31 @@ class TimerHomePage extends StatelessWidget {
                   ),
                   Expanded(
                       child: ProductivityButton(
-                          color: Color(0xff009688),
-                          text: "Work",
-                          onPressed: () => timer.startWork())),
+                    color: Color(0xff009688),
+                    text: "Work",
+                    onPressed: () => timer.startWork(),
+                    size: 5,
+                  )),
                   Padding(
                     padding: EdgeInsets.all(defaultPadding),
                   ),
                   Expanded(
                       child: ProductivityButton(
-                          color: Color(0xff607D8B),
-                          text: "Short Break",
-                          onPressed: () => timer.startBreak(true))),
+                    color: Color(0xff607D8B),
+                    text: "Short Break",
+                    onPressed: () => timer.startBreak(true),
+                    size: 5,
+                  )),
                   Padding(
                     padding: EdgeInsets.all(defaultPadding),
                   ),
                   Expanded(
                       child: ProductivityButton(
-                          color: Color(0xff455A64),
-                          text: "Long Break",
-                          onPressed: () => timer.startBreak(false))),
+                    color: Color(0xff455A64),
+                    text: "Long Break",
+                    onPressed: () => timer.startBreak(false),
+                    size: 5,
+                  )),
                   Padding(
                     padding: EdgeInsets.all(defaultPadding),
                   ),
@@ -92,17 +103,21 @@ class TimerHomePage extends StatelessWidget {
                   ),
                   Expanded(
                       child: ProductivityButton(
-                          color: Color(0xff212121),
-                          text: 'Stop',
-                          onPressed: () => timer.stopTimer())),
+                    color: Color(0xff212121),
+                    text: 'Stop',
+                    onPressed: () => timer.stopTimer(),
+                    size: 5,
+                  )),
                   Padding(
                     padding: EdgeInsets.all(defaultPadding),
                   ),
                   Expanded(
                       child: ProductivityButton(
-                          color: Color(0xff009688),
-                          text: 'Restart',
-                          onPressed: () => timer.startTimer())),
+                    color: Color(0xff009688),
+                    text: 'Restart',
+                    onPressed: () => timer.startTimer(),
+                    size: 5,
+                  )),
                   Padding(
                     padding: EdgeInsets.all(defaultPadding),
                   ),
