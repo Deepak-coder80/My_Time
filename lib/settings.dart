@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '.widgets.dart';
+import 'package:my_time/widgets.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -19,16 +19,16 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  TextEditingController txtWork;
-  TextEditingController txtShort;
-  TextEditingController txtLong;
+  late TextEditingController txtWork;
+  late TextEditingController txtShort;
+  late TextEditingController txtLong;
   static const String WORKTIME = "workTime";
   static const String SHORTBREAK = "shortBreak";
   static const String LONGBREAK = "longBreak";
-  int workTime;
-  int shortBreak;
-  int longBreak;
-  SharedPreferences prefs;
+  late int workTime;
+  late int shortBreak;
+  late int longBreak;
+  late SharedPreferences prefs;
 
   @override
   void initState() {
