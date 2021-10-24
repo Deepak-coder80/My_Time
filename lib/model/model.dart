@@ -1,5 +1,5 @@
-class TimeModel1 {
+class TimeModel {
   String time;
   double percent;
-  TimeModel1({required this.time, required this.percent});
+  TimeModel({required this.time, required this.percent});
 }
